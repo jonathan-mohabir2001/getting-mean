@@ -12,7 +12,7 @@ const ctrlOthers = require('../controllers/others');
 
 //Routes defined below for the controllers 
 
-router.get('/', ctrlLocations.homelist);
+router.get('/', ctrlLocations.homeList);
 // access the homelist method of the ctrllocations object
 
 router.get('/location', ctrlLocations.locationInfo);

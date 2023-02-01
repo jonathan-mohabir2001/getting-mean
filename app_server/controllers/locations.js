@@ -1,5 +1,6 @@
-const homelist = (req, res) => {
-  res.render('index', { title: 'Home' });
+const homeList = (req, res) => {
+  // new controller method will be rendering another view.
+  res.render('locations-list', { title: 'Home' });
 };
 
 const locationInfo = (req, res) => {
@@ -11,7 +12,7 @@ const addReview = (req, res) => {
 };
 
 module.exports = {
-  homelist,
+  homeList,
   locationInfo,
   addReview,
 };
