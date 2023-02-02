@@ -4,8 +4,10 @@ const homeList = (req, res) => {
 };
 
 const locationInfo = (req, res) => {
-  res.render('index', { title: 'Location info' });
+  res.render('location-info', { title: 'Location info' });
 };
+// controller now renders a new view location-info. 
+
 
 const addReview = (req, res) => {
   res.render('index', { title: 'Add review' });
