@@ -13,20 +13,24 @@ block content
         .card-block   
           h4 
             a(href="/location") Starcups 
-            // this href lets the user click on the name, and will then route on over to the location page for Starcups 
-            small &nbsp; 
-              i.fas.fa-star 
-              i.fas.fa-star
-              i.fas.fa-star
-              i.fas.fa-star
-              i.fas.fa-star-half-alt
-              p.address 125 High Street, Reading, RG6 1PS 
-              p.facilities
-                
-                span.badge.badge-warning Hot Drinks 
-                span.badge.badge-success Food 
-                span.badge.badge-primary Power
-                span.badge.badge-secondary Wifi
+
+            each location in locations 
+              .card 
+                .card-block 
+
+                  h4 
+                  a(href="/location")= location.name
+                  small &nbsp; 
+                    i.fas.fa-star 
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    span.badge.badge-pill.badge-default.float-right= location.distance
+                    i.fas.fa-star-half-alt
+                    p.address= location.address 
+                      .facilities 
+                        .span.badge.badge-warning= facility 
+
         
  
   .row
