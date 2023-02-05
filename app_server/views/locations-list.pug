@@ -21,10 +21,12 @@ block content
                   h4 
                   a(href="/location")= location.name
                   small &nbsp; 
-                    i.fas.fa-star 
-                    i.fas.fa-star
-                    i.fas.fa-star
-                    i.fas.fa-star
+                     - for (let i = 1;, i <= location.rating; i++) 
+                        i.fas.fa-star
+
+                     - for (let i = location.rating + 1;, i <= 5; i++) 
+                        i.fas.fa-star-half-alt
+                        
                     span.badge.badge-pill.badge-default.float-right= location.distance
                     i.fas.fa-star-half-alt
                     p.address= location.address 
